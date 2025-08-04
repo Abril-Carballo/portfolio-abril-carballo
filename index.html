@@ -19,21 +19,79 @@
     </header>
 
     <main>
-        <h1>Abril Carballo</h1>
 
-        <section> <!-- Sobre mi -->
-
+        <!-- Presentación -->
+        <section id="presentacion">
+            <h2>¡Hola! Soy Abril Carballo</h2>
+            <h1>Futura Ingeniera en Sistemas de Información</h1>
+            <p>Actualmente estoy estudiando en la Universidad Tecnológica Nacional de Villa María. Este sitio es una muestra de lo que aprendí y de mis primeros pasos en desarrollo web.</p>
+            
+            <img src="img/foto.jpg" alt="Foto de Abril" id="imagen1">
         </section>
 
-        <section>
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h2>Proyectos</h2>
 
-        </section> <!-- Proyectos -->
-        
-        <section>
+            <div class="proyecto">
+                <h3>Proyecto 1: Tarjeta de presentación</h3> <!-- Descripción breve de lo que hace, para qué sirve o qué aprendiste haciéndolo. -->
+                <p>Es una página sencilla donde muestro mi información básica. </p>
+                <a href="https://abril-carballo.github.io/Tarjeta-presentacion/" target="_blank">Ver en GitHub</a>
+            </div>
 
-        </section> <!-- Contacto -->
+            <div class="proyecto">
+                <h3>Proyecto 2: Menú Digital</h3>
+                <p>Esta es una carta digital de un restaurante. En este proyecto también aprendí a cuidar la estética del sitio: usé pocas tipografías, seleccioné colores complementarios desde Color Hunt y prioricé una visual ordenada. </p>
+                <a href="https://abril-carballo.github.io/menu-digital/" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="proyecto">
+                <h3>Proyecto 3: Copia "Mi página web"</h3>
+                <p>Este proyecto fue una práctica personal donde recreé la estructura y diseño de un sitio existente con fines educativos. Me ayudó a afianzar conceptos de HTML semántico y a trabajar en el uso equilibrado de tipografías y colores, aplicando una paleta armónica tomada de Color Hunt. Fue uno de mis primeros acercamientos a la maquetación web y organización de contenido visual.</p>
+                <a href="https://abril-carballo.github.io/copia_Mi-pagina-web/" target="_blank">Ver en GitHub</a>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Git / GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Podés encontrarme en mis redes o escribirme a través del formulario.</p>
+
+            <ul>
+                <li><a href="https://www.linkedin.com/in/abril-carballo-6a6177359/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Abril-Carballo">GitHub</a></li>
+                <li><a href="https://mail.google.com/mail/u/1/#inbox">abril.carballo12@gmail.com</a></li>
+            </ul>
+
+            <!-- Formulario simulado -->
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje"></textarea><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
     </main>
+
 
     <footer>
 
