@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* para todo el texto */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU:wght@100..400&family=Quicksand:wght@500&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100..900&display=swap');
+
+/* para el saludo */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* cursiva para mi nombre */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU:wght@100..400&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 * {
@@ -8,101 +14,124 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   background-color: #FFEAEA;
 }
 
 /* Header */
 header {
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  justify-content: space-between;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    margin: 10px 35px 0 35px;
+    background-color: #F5CBCB;
+    border-radius: 10px;
 }
 
-/* Navegación */
+header h2 {
+    color: #748DAE;
+}
+
+/* navegacion */
+nav button {
+    background-color: #748DAE;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 20px;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    outline: none; /* quite el outline por defecto */
+}
+
+
+nav button:focus {
+  outline: none; /* quite el outline */
+  /* sombra suave azul celeste */
+  box-shadow: 0 0 0 3px rgba(116, 141, 174, 0.7);
+}
+
 nav a {
-  text-decoration: none;
-  background-color: #1E3A89;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  font-weight: bold;
-  margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 /* Contenedor principal dividido en dos mitades */
 .pagina {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem; /* 32px */
-  box-sizing: border-box;
-  gap: 1rem; /* separa texto y imagen un , 16px */
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4rem 0rem 4rem;
+    box-sizing: border-box;
+    gap: 1rem; /* separa texto y imagen un , 16px */
+    margin-left: 20px;
+    margin-right: 35px;
 }
 
 .texto, .imagen {
-  flex: 1;
-  padding: 1rem;
-  max-width: 50vw; /* que no supere la mitad del viewport ancho */
-  box-sizing: border-box;
+    flex: 1;
+    padding: 0 1rem 1rem 1rem;
+    max-width: 50vw; /* que no supere la mitad del viewport ancho */
+    box-sizing: border-box; 
 }
 
 /* Centrar la imagen en su contenedor */
 .imagen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* CARD - contenedor con perspectiva */
 .card {
-  width: 100%;
-  max-width: 400px;
-  height: 500px; /* altura fija para que el flip funcione */
-  position: relative;
-  perspective: 1000px; /* perspectiva 3D */
-  cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    height: 500px; /* altura fija para que el flip funcione */
+    position: relative;
+    perspective: 1000px; /* perspectiva 3D */
+    cursor: pointer;
 }
 
 /* Contenedor interno que gira */
 .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
 /* Al hacer hover sobre la card, gira 180 grados */
 .card:hover .card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Las dos caras de la card */
 .card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  backface-visibility: hidden; /* oculta la cara que no se ve */
-  box-shadow: 10px 15px 20px rgba(0,0,0, 0.4), -5px -10px 20px rgba(0,0,0, 0.1);
-  background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden; /* oculta la cara que no se ve */
+    box-shadow: 10px 15px 20px rgba(0,0,0, 0.4), -5px -10px 20px rgba(0,0,0, 0.1);
+    background-color: white;
 }
 
 /* Cara trasera girada 180 grados */
 .card-back {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Las imágenes dentro de las caras */
 .card-face img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* cubre todo el espacio sin deformar */
-  border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cubre todo el espacio sin deformar */
+    border-radius: 8px;
 }
 
 /* Responsive para celulares */
@@ -133,5 +162,45 @@ nav a {
     max-width: 300px;
     margin: 0 auto;
   }
+}
+
+/* Texto de presentacion */
+.saludo {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3.5rem;          
+    font-weight: 300;
+    letter-spacing: 2px; 
+    text-align: center;
+    margin-bottom: 25px;
+    color: #748DAE;
+}
+
+.texto p {
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.5; /* 1.5 veces el tamaño de la letra */
+    background-color: rgba(158, 202, 214, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid #9ECAD6;
+}
+
+
+.otra_fuente {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+
+.titulo {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2.5rem;          
+    font-weight: 100;
+    letter-spacing: 2px; 
+    text-align: center;
+    margin-bottom: 25px;
+    color: #9ECAD6;
 }
 
