@@ -204,3 +204,37 @@ nav a {
     color: #9ECAD6;
 }
 
+/* PAGINA 2, PROYECTOS */
+
+.segunda-pagina {
+    background-color: white;
+    padding: 2rem;
+    min-height: 100vh; /* para que ocupe toda la pantalla */
+}
+
+section h2 {
+    font-size: xx-large;
+}
+
+section span {
+    font-size: large;
+    color: #748DAE;
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5CBCB;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.proyecto-12 {
+    display: flex;
+}
+
+.proyecto1, .proyecto2 {
+    width: 50%;
+    padding: 1rem;
+}
