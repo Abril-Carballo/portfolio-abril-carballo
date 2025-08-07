@@ -43,8 +43,13 @@ nav button {
     border: none;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     outline: none; /* quite el outline por defecto */
+    cursor: pointer;
 }
 
+nav button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 nav button:focus {
   outline: none; /* quite el outline */
@@ -222,19 +227,50 @@ section span {
 }
 
 .proyecto {
-    display: flex;
-    flex-direction: column;
-    background-color: #F5CBCB;
+    background-color: #9ECAD6;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-}
-
-.proyecto-12 {
     display: flex;
+    justify-content: space-between;
 }
 
-.proyecto1, .proyecto2 {
-    width: 50%;
-    padding: 1rem;
+div h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: xx-large;
 }
+
+.mayus {
+    text-transform: uppercase;
+    color: #748DAE;
+    font-weight: bold;
+}
+
+/* links a github proyectos */
+a.boton-github {
+    background-color: #748DAE;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;  /* ancho solo el del texto */
+    width: auto;            /* no ancho completo */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+a.boton-github:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+a.boton-github:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(116, 141, 174, 0.7);
+}
+
+
+
+
