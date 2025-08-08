@@ -215,6 +215,10 @@ nav a {
     min-height: 100vh; /* para que ocupe toda la pantalla */
 }
 
+.titulo-proyecto {
+    margin-bottom: 20px;
+}
+
 section h2 {
     font-size: xx-large;
 }
@@ -249,6 +253,7 @@ a.boton-github {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     outline: none;
+    
 }
 
 a.boton-github:hover {
@@ -276,6 +281,8 @@ a.boton-github:focus {
   padding: 20px;
   flex: 1; /* permite que se repartan el espacio */
   min-width: 280px; /* evita que se achiquen demasiado en pantallas chicas */
+  display: flex;
+  flex-direction: column;
 }
 
 /* imagenes proyecto 3 */
@@ -298,6 +305,7 @@ a.boton-github:focus {
     border-radius: 10px;
     box-shadow: 5px 10px 15px rgba(0,0,0,0.4), -2px -5px 10px rgba(0,0,0,0.1);
     transition: flex 0.7s ease;
+    display: flex;
 }
 
 .item:hover {
@@ -333,5 +341,11 @@ a.boton-github:focus {
 
 /* Cuando el elemento con clase .item es hoverado, el contenido .content dentro aumenta su opacidad a 1 */
 .item:hover .content {
-  opacity: 0; /* Hace visible el contenido al pasar el mouse sobre .item */
+    opacity: 0; /* Hace visible el contenido al pasar el mouse sobre .item */
+}
+
+.contenedor-boton {
+    margin-top: auto; /* empuja el botón hacia abajo */
+    display: flex;
+    justify-content: flex-end; /* lo manda a la derecha */
 }
