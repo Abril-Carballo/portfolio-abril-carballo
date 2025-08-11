@@ -35,7 +35,6 @@ header h2 {
     color: #748DAE;
 }
 
-
 /* navegacion */
 nav button {
     background-color: #748DAE;
@@ -46,6 +45,8 @@ nav button {
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     outline: none; /* quite el outline por defecto */
     cursor: pointer;
+    color: white;
+    font-weight: bold;
 }
 
 nav button:hover {
@@ -489,6 +490,12 @@ a.boton-github:focus {
 
 .gmail:hover {
     background-color: rgb(234, 234, 207);
+    color: black;
+    text-decoration: none;
+}
+
+.cv:hover {
+    background-color: plum;
     color: black;
     text-decoration: none;
 }
