@@ -380,8 +380,6 @@ a.boton-github:focus {
     max-width: 600px;
 }
 
-
-
 .habilidades-grupo {
     display: flex;
     align-items: center;
@@ -391,12 +389,11 @@ a.boton-github:focus {
 .categoria {
     font-family: inherit;
     font-weight: 700;
-    font-size: large;
+    font-size: x-large;
     color: #0b2a33;
     white-space: nowrap;
     margin: 0; 
 }
-
 
 /* Lista de habilidades, etiqueta li */
 .items-hability {
@@ -412,7 +409,7 @@ a.boton-github:focus {
     background-color: white;
     padding: 8px 14px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: large;
     cursor: pointer;
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
@@ -431,11 +428,67 @@ a.boton-github:focus {
     }
 }
 
+/* texto sobre mi */
 .text-me {
     margin-top: 20px;
     background-color: white;
-    padding: 10px 15px;
+    padding: 20px;
     border-radius: 20px;
     font-size: large;
     line-height: 1.5;
+}
+
+
+/* PAGINA 4, CONTACTO */
+
+.contacto {
+    background-color: white;
+    padding: 2rem;
+    min-height: 100vh; /* para que ocupe toda la pantalla */
+    margin-bottom: 40px;
+}
+
+.punto-3 {
+    color: #748DAE;
+}
+
+.contacto p {
+    font-size: larger;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.redes a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FFEAEA;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.linkedin:hover {
+    background-color: #3498db;
+    color: black;
+    text-decoration: none;
+}
+
+.github:hover {
+    background-color: rgb(143, 8, 143);
+    color: black;
+    text-decoration: none;
+}
+
+.gmail:hover {
+    background-color: rgb(234, 234, 207);
+    color: black;
+    text-decoration: none;
 }

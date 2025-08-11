@@ -9,16 +9,15 @@
 <body>
     <header>
         <h2>Mi portfolio ❤</h2>
-
         <nav>
-            <button id="boton"><a href="#">Sobre mi</a></button>
-            <button id="boton"><a href="#">Proyectos</a></button>
-            <button id="boton"><a href="#">Contacto</a></button>
+            <button data-target="proyectos">Proyectos</button>
+            <button data-target="presentacion">Sobre mi</button>
+            <button data-target="contacto">Contacto</button>
         </nav>
     </header>
 
     <main>
-        <section id="presentacion" class="pagina">
+        <section class="pagina">
             <div class="texto">
                 <h2 class="saludo">¡Hola! Soy <span class="otra_fuente">Abril Carballo</span></h2>
                 <h1 class="titulo">Futura Ingeniera en Sistemas de Información</h1>
@@ -114,7 +113,7 @@
         </section>
 
         <!-- Habilidades -->
-        <section class="habilidades">
+        <section id="presentacion" class="habilidades">
 
             <h2>Habilidades <span class="punto-2">⏺</span></h2>
             <div class="habilidades-matriz">
@@ -153,6 +152,10 @@
             <div>
                 <h2>Sobre mi <span class="punto-2">⏺</span></h2>
                 <p class="text-me">
+                    Soy de Justiniano Posse, Cba., pero ahora vivo en Villa María. 
+                </p>
+
+                <p class="text-me">
                     Actualmente estoy estudiando en la <strong>Universidad Tecnológica Nacional de Villa María</strong>. 
                     Este sitio es una muestra de lo que aprendí y de mis primeros pasos en <strong>desarrollo web</strong>.
                 </p>
@@ -166,14 +169,14 @@
 
 
         <!-- Contacto -->
-        <section id="contacto">
-            <h2>Contacto</h2>
+        <section id="contacto" class="contacto">
+            <h2>Contacto <span class="punto-3">⏺</span></h2>
             <p>Podés encontrarme en mis redes o escribirme a través del formulario.</p>
 
-            <ul>
-                <li><a href="https://www.linkedin.com/in/abril-carballo-6a6177359/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/Abril-Carballo">GitHub</a></li>
-                <li><a href="https://mail.google.com/mail/u/1/#inbox">abril.carballo12@gmail.com</a></li>
+            <ul class="redes">
+                <li><a href="https://www.linkedin.com/in/abril-carballo-6a6177359/" class="linkedin" target="_blank">&#x1F517 LinkedIn</a></li>
+                <li><a href="https://github.com/Abril-Carballo" class="github">𑄝 GitHub</a></li>
+                <li><a href="https://mail.google.com/mail/u/1/#inbox" class="gmail">✉ abril.carballo12@gmail.com</a></li>
             </ul>
 
             <!-- Formulario simulado -->
