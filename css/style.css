@@ -359,6 +359,7 @@ a.boton-github:focus {
 
 /* fin imagenes proyecto 3 */
 
+
 /* PAGINA 3 */
 .habilidades {
     background-color: #9ECAD6;
@@ -370,25 +371,71 @@ a.boton-github:focus {
     color: #F5CBCB;
 }
 
+.habilidades-matriz {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 60px;
+    margin: 30px auto; 
+    justify-content: center; 
+    max-width: 600px;
+}
+
+
+
+.habilidades-grupo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.categoria {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: large;
+    color: #0b2a33;
+    white-space: nowrap;
+    margin: 0; 
+}
+
+
+/* Lista de habilidades, etiqueta li */
 .items-hability {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .items-hability li {
-  background-color: white;
-  padding: 10px 15px;
-  border-radius: 20px;
-  list-style-type: none;
+    background-color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.items-hability li:hover {
+    background: #ffeaea;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Responsive para móviles */
+@media (max-width: 760px) {
+    .habilidades-matriz {
+        grid-template-columns: 1fr;
+    }
 }
 
 .text-me {
     margin-top: 20px;
     background-color: white;
-    padding: 20px 15px;
+    padding: 10px 15px;
     border-radius: 20px;
+    font-size: large;
+    line-height: 1.5;
 }
-
-
