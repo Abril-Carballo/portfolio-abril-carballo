@@ -28,11 +28,13 @@ header {
     margin: 10px 35px 0 35px;
     background-color: #F5CBCB;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h2 {
     color: #748DAE;
 }
+
 
 /* navegacion */
 nav button {
@@ -190,7 +192,6 @@ nav a {
     border: 2px solid #9ECAD6;
 }
 
-
 .otra_fuente {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
@@ -237,7 +238,7 @@ div h3 {
 .mayus {
     text-transform: uppercase;
     color: #748DAE;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 /* links a github proyectos */
@@ -276,13 +277,19 @@ a.boton-github:focus {
 
 /* Estilo base de cada proyecto */
 .proyecto {
-  background-color: #9ECAD6;
-  border-radius: 10px;
-  padding: 20px;
-  flex: 1; /* permite que se repartan el espacio */
-  min-width: 280px; /* evita que se achiquen demasiado en pantallas chicas */
-  display: flex;
-  flex-direction: column;
+    background-color: #9ECAD6;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1; /* permite que se repartan el espacio */
+    min-width: 280px; /* evita que se achiquen demasiado en pantallas chicas */
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-proyecto {
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 5px;
 }
 
 /* imagenes proyecto 3 */
@@ -349,3 +356,39 @@ a.boton-github:focus {
     display: flex;
     justify-content: flex-end; /* lo manda a la derecha */
 }
+
+/* fin imagenes proyecto 3 */
+
+/* PAGINA 3 */
+.habilidades {
+    background-color: #9ECAD6;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.punto-2 {
+    color: #F5CBCB;
+}
+
+.items-hability {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.items-hability li {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  list-style-type: none;
+}
+
+.text-me {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 20px;
+}
+
+
