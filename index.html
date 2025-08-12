@@ -10,6 +10,7 @@
 <body>
     <header>
         <h2>Mi portfolio ❤</h2>
+        <button class="hamburger" aria-label="Menú ☰">☰</button>
         <nav>
             <button data-target="proyectos">Proyectos</button>
             <button data-target="presentacion">Sobre mi</button>
@@ -188,14 +189,14 @@
             <form class="max-w-md mx-auto mt-4 p-6 bg-[#748DAE] rounded-2xl shadow-lg space-y-4">
                 <div>
                     <label for="nombre" class="block mb-1 text-sm font-semibold text-white tracking-wide">Nombre</label>
-                    <input type="text" id="nombre" name="nombre"
+                    <input type="text" id="nombre" name="nombre" required
                     class="w-full px-4 py-2 rounded-lg placeholder-gray-400 text-gray-700 border border-transparent focus:border-[#F5CBCB] focus:ring-2 focus:ring-[#F5CBCB] outline-none transition" 
                     placeholder="Tu nombre" />
                 </div>
 
                 <div>
                     <label for="email" class="block mb-1 text-sm font-semibold text-white tracking-wide">Correo</label>
-                    <input type="email" id="email" name="email"
+                    <input type="email" id="email" name="email" required
                     class="w-full px-4 py-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 border border-transparent focus:border-[#F5CBCB] focus:ring-2 focus:ring-[#F5CBCB] outline-none transition" 
                     placeholder="tunombre@ejemplo.com" />
                 </div>
@@ -218,12 +219,8 @@
         
         <script src="app.js"></script>
     </main>
-    <footer>
-        
+    <footer class="text-center p-1">
+        <p>&copy; 2025 ABRIL CARBALLO. Todos los derechos reservados.</p>
     </footer>
-
-
-
-    <script src="app.js"></script>
 </body>
 </html>

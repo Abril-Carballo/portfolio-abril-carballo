@@ -441,12 +441,11 @@ a.boton-github:focus {
 
 
 /* PAGINA 4, CONTACTO */
-
 .contacto {
     background-color: white;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
     min-height: 100vh; /* para que ocupe toda la pantalla */
-    margin-bottom: 40px;
+
 }
 
 .punto-3 {
@@ -498,4 +497,85 @@ a.boton-github:focus {
     background-color: plum;
     color: black;
     text-decoration: none;
+} 
+
+/* --- Responsive y menú hamburguesa --- */
+
+/* Oculto el nav por defecto en móvil y muestro botón hamburguesa */
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botón hamburguesa: oculto por defecto */
+header .hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #748DAE;
+}
+
+/* Media query para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .pagina {
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+  
+  .card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  /* Layout principal en columna */
+  .pagina {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .imagen, .texto {
+    padding: 0.5rem;
+    max-width: 100vw;
+  }
+
+  /* Tarjetas un poco más angostas */
+  .card {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  /* Menú: oculto nav y muestro hamburguesa */
+  header nav {
+    display: none;
+    flex-direction: column;
+    background-color: #F5CBCB;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  header nav.show {
+    display: flex;
+  }
+
+  /* Botón hamburguesa visible */
+  header .hamburger {
+    display: block;
+  }
+
+  /* Botones nav en columna, tamaño cómodo para dedos */
+  nav button {
+    margin: 8px 0;
+    padding: 12px 0;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 0;
+  }
 }

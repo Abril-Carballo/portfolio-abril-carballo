@@ -1,5 +1,8 @@
 // Seleccionamos todos los botones dentro del nav
 const botones = document.querySelectorAll('nav button');
+const hamburger = document.querySelector('header .hamburger');
+const nav = document.querySelector('header nav');
+
 
 
 botones.forEach(boton => { // forEach loop
@@ -39,3 +42,9 @@ botones.forEach(boton => {
     }
   });
 });
+
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+
