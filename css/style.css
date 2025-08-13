@@ -111,10 +111,7 @@ nav a {
     transform-style: preserve-3d;
 }
 
-/* Al hacer hover sobre la card, gira 180 grados */
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
+
 
 /* Las dos caras de la card */
 .card-face {
@@ -138,36 +135,6 @@ nav a {
     height: 100%;
     object-fit: cover; /* cubre todo el espacio sin deformar */
     border-radius: 8px;
-}
-
-/* Responsive para celulares */
-@media (max-width: 768px) {
-  .pagina {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .imagen, .texto {
-    padding: 0.5rem;
-  }
-
-  .card {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
-/* Responsive para tablets */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .pagina {
-    padding: 1.5rem;
-  }
-
-  .card {
-    max-width: 300px;
-    margin: 0 auto;
-  }
 }
 
 /* Texto de presentacion */
@@ -360,7 +327,6 @@ a.boton-github:focus {
 
 /* fin imagenes proyecto 3 */
 
-
 /* PAGINA 3 */
 .habilidades {
     background-color: #9ECAD6;
@@ -420,13 +386,6 @@ a.boton-github:focus {
     background: #ffeaea;
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
-/* Responsive para móviles */
-@media (max-width: 760px) {
-    .habilidades-matriz {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* texto sobre mi */
@@ -517,26 +476,76 @@ header .hamburger {
   color: #748DAE;
 }
 
-/* Media query para tablets */
-@media (max-width: 1024px) and (min-width: 769px) {
+/* --- Media query para tablets (769px - 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Layout principal: texto e imagen uno al lado del otro pero más compacto */
   .pagina {
     flex-direction: row;
+    justify-content: space-around;
     padding: 1.5rem;
+    gap: 1rem;
   }
-  
-  .card {
-    max-width: 300px;
+
+  .imagen, .texto {
+    max-width: 45%; /* que no ocupen más de la mitad cada uno */
+    padding: 0.5rem;
+  }
+
+  /* Imagen de tu cara */
+  .imagen img {
+    width: 100%;
+    max-width: 350px; /* ajustada a tablet */
+    height: auto;
+    display: block;
     margin: 0 auto;
   }
+
+  /* Tarjetas */
+  .card {
+    max-width: 300px;
+    margin: 1rem auto;
+  }
+
+  /* Proyecto 3 - imágenes */
+  .container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .item {
+    flex: 1 1 45%; /* dos imágenes por fila */
+    max-width: 45%;
+    margin-bottom: 10px;
+  }
+
+  .item:hover {
+    flex: 1 1 45%; /* no se expande demasiado en hover */
+  }
+
+  /* Links de contacto */
+  .redes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .redes a {
+    width: auto;
+    padding: 10px 15px;
+  }
+
 }
 
-/* Media query para móviles */
+/* --- Media query para móviles (max-width: 768px) --- */
 @media (max-width: 768px) {
+
   /* Layout principal en columna */
   .pagina {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0.5rem; /* menos padding horizontal */
   }
 
   .imagen, .texto {
@@ -544,7 +553,16 @@ header .hamburger {
     max-width: 100vw;
   }
 
-  /* Tarjetas un poco más angostas */
+  /* Imagen de tu cara */
+  .imagen img {
+    width: 100%;
+    max-width: 400px; /* opcional: que no se haga gigante */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Tarjetas más angostas */
   .card {
     max-width: 90%;
     margin: 1rem auto;
@@ -578,4 +596,60 @@ header .hamburger {
     width: 100%;
     border-radius: 0;
   }
+
+  /* Proyecto 3 - imágenes */
+  .container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .item {
+    flex: 1 1 100%; /* cada imagen ocupa todo el ancho en móvil */
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .item:hover {
+    flex: 1 1 100%; /* no crecer demasiado en móvil */
+  }
+
+    /* Habilidades en móviles */
+    .habilidades-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra cada grupo */
+    gap: 15px; /* espacio entre grupos */
+    }
+
+    .habilidades-grupo {
+    width: 90%; /* que no ocupe todo el ancho */
+    text-align: center; /* centra el texto */
+    }
+
+
+  /* Links de contacto */
+  .redes {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .redes a {
+    width: 95%; /* que no ocupe todo el ancho */
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+
+/* Hover SOLO para PC */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Clase para móviles (click/tap) */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
 }

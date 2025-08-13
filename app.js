@@ -31,7 +31,7 @@ botones.forEach(boton => { // forEach loop
 });
 
 
-
+// scroll con botones
 botones.forEach(boton => {
   boton.addEventListener('click', () => {
     const targetID = boton.getAttribute('data-target');
@@ -43,8 +43,21 @@ botones.forEach(boton => {
   });
 });
 
-
+// menu tipo hamburguesa para moviles 
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('show');
+});
+
+// efecto de la imagen con avatar en telefonos y pc
+document.addEventListener('DOMContentLoaded', () => {
+  const card = document.querySelector('.card');
+
+  const esTactil = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  if (esTactil) {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  }
 });
 
