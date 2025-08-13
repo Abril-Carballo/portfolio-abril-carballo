@@ -525,6 +525,17 @@ header .hamburger {
     flex: 1 1 45%; /* no se expande demasiado en hover */
   }
 
+    /* Por defecto: efecto gris / contenido oculto */
+  .item .content {
+    opacity: 1; /* gris visible */
+    transition: opacity 0.3s ease;
+  }
+
+  /* Cuando se toca: se muestra la imagen real */
+  .item.active .content {
+    opacity: 0; /* se oculta el gris, se ve la imagen real */
+  }
+
   /* Links de contacto */
   .redes {
     flex-direction: row;
@@ -643,6 +654,17 @@ header .hamburger {
 
   .item:hover {
     flex: 1 1 100%; /* no crecer demasiado en móvil */
+  }
+
+  /* Por defecto: efecto gris / contenido oculto */
+  .item .content {
+    opacity: 1; /* gris visible */
+    transition: opacity 0.3s ease;
+  }
+
+  /* Cuando se toca: se muestra la imagen real */
+  .item.active .content {
+    opacity: 0; /* se oculta el gris, se ve la imagen real */
   }
 
   /* Habilidades en móviles */

@@ -55,11 +55,9 @@ hamburger.addEventListener('click', () => {
 // hover imagenes proyecto 3 para dispositivos tactiles
 document.querySelectorAll('.item').forEach(item => {
   item.addEventListener('click', () => {
-    const content = item.querySelector('.content');
-    content.style.opacity = content.style.opacity === '1' ? '0' : '1';
+    item.classList.toggle('active'); // activa/desactiva el efecto
   });
 });
-
 
 // efecto de la imagen con avatar en dispositivos tactiles
 document.addEventListener('DOMContentLoaded', () => {
