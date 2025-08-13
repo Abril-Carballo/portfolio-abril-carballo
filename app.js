@@ -1,15 +1,19 @@
 // Seleccionamos todos los botones dentro del nav
 const botones = document.querySelectorAll('nav button');
+
+// Constantes para el menu tipo hamburguesa 
 const hamburger = document.querySelector('header .hamburger');
 const nav = document.querySelector('header nav');
 
+// Constantes para actualizar anio en footer
+const anioSpan = document.getElementById('anio');
+const anioActual = new Date().getFullYear();
 
 
 botones.forEach(boton => { // forEach loop
-  // Agregamos transición suave
+  //  transición suave
   boton.style.transition = 'transform 0.2s ease'; // ease --> suave
 
-  // Funciones
   function agrandar() {
     boton.style.transform = 'scale(1.1)';
   }
@@ -48,7 +52,16 @@ hamburger.addEventListener('click', () => {
   nav.classList.toggle('show');
 });
 
-// efecto de la imagen con avatar en telefonos y pc
+// hover imagenes proyecto 3 para dispositivos tactiles
+document.querySelectorAll('.item').forEach(item => {
+  item.addEventListener('click', () => {
+    const content = item.querySelector('.content');
+    content.style.opacity = content.style.opacity === '1' ? '0' : '1';
+  });
+});
+
+
+// efecto de la imagen con avatar en dispositivos tactiles
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.card');
 
@@ -62,3 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Obtener el anio
+anioSpan.textContent = anioActual;

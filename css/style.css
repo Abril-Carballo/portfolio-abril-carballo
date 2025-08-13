@@ -9,13 +9,13 @@
 
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
-  background-color: #FFEAEA;
+    font-family: "Quicksand", sans-serif;
+    background-color: #FFEAEA;
 }
 
 /* Header */
@@ -52,14 +52,14 @@ nav button {
 }
 
 nav button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav button:focus {
-  outline: none; /* quite el outline */
-  /* sombra suave azul celeste */
-  box-shadow: 0 0 0 3px rgba(116, 141, 174, 0.7);
+    outline: none; /* quite el outline */
+    /* sombra suave azul celeste */
+    box-shadow: 0 0 0 3px rgba(116, 141, 174, 0.7);
 }
 
 nav a {
@@ -77,7 +77,7 @@ nav a {
     align-items: center;
     padding: 0rem 4rem 0rem 4rem;
     box-sizing: border-box;
-    gap: 1rem; /* separa texto y imagen un , 16px */
+    gap: 1rem; /* separa texto y imagen 16px */
 }
 
 .texto, .imagen {
@@ -112,8 +112,6 @@ nav a {
     transition: transform 1s;
     transform-style: preserve-3d;
 }
-
-
 
 /* Las dos caras de la card */
 .card-face {
@@ -178,6 +176,7 @@ nav a {
     color: #9ECAD6;
 }
 
+
 /* PAGINA 2, PROYECTOS */
 
 .segunda-pagina {
@@ -223,8 +222,7 @@ a.boton-github {
     width: auto;            /* no ancho completo */
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
-    outline: none;
-    
+    outline: none;   
 }
 
 a.boton-github:hover {
@@ -239,10 +237,10 @@ a.boton-github:focus {
 
 /* PROYECTO 1 Y 2 contenedor flex para los primeros dos proyectos */
 .proyectos-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* por si el espacio es chico en pantallas móviles */
-  margin-bottom: 2rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* por si el espacio es chico en pantallas móviles */
+    margin-bottom: 2rem;
 }
 
 /* Estilo base de cada proyecto */
@@ -329,6 +327,7 @@ a.boton-github:focus {
 
 /* fin imagenes proyecto 3 */
 
+
 /* PAGINA 3 */
 .habilidades {
     background-color: #9ECAD6;
@@ -364,7 +363,7 @@ a.boton-github:focus {
     margin: 0; 
 }
 
-/* Lista de habilidades, etiqueta li */
+/* Lista de habilidades */
 .items-hability {
     display: flex;
     gap: 10px;
@@ -460,6 +459,7 @@ a.boton-github:focus {
     text-decoration: none;
 } 
 
+
 /* --- Responsive y menú hamburguesa --- */
 
 /* Oculto el nav por defecto en móvil y muestro botón hamburguesa */
@@ -482,18 +482,17 @@ header .hamburger {
 @media (min-width: 769px) and (max-width: 1024px) {
 
   /* Layout principal: texto e imagen uno al lado del otro pero más compacto */
-    .pagina {
-    flex-direction: row;
-    justify-content: center; /* en vez de space-around */
-    padding: 1rem; /* un poco menos de relleno */
-    gap: 2rem; /* deja espacio solo entre los elementos */
-    }
+  .pagina {
+      flex-direction: row;
+      justify-content: center; /* en vez de space-around */
+      padding: 1rem; /* un poco menos de relleno */
+      gap: 2rem; /* deja espacio solo entre los elementos */
+      }
 
-    .imagen, .texto {
-    max-width: 50%; /* un poco más para que ocupen mejor la pantalla */
-    padding: 0.5rem;
-    }
-
+      .imagen, .texto {
+      max-width: 50%; /* un poco más para que ocupen mejor la pantalla */
+      padding: 0.5rem;
+  }
 
   /* Imagen de tu cara */
   .imagen img {

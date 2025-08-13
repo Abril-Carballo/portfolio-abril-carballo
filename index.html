@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
         <h2>Mi portfolio ❤</h2>
-        <button class="hamburger" aria-label="Menú ☰">☰</button>
+        <button class="hamburger" aria-label="Menú ☰">☰</button> <!-- arial-label: atributo de accesibilidad -->
         <nav>
-            <button data-target="proyectos">Proyectos</button>
+            <button data-target="proyectos">Proyectos</button> <!-- data-target: almacenar información que luego usas en JS -->
             <button data-target="presentacion">Sobre mi</button>
             <button data-target="contacto">Contacto</button>
         </nav>
@@ -45,8 +46,7 @@
                 <h2>Proyectos <span>⏺</span></h2>
             </div>
             
-
-            <!-- contenedor flexible solo para los primeros 2 -->
+            <!-- contenedor flexible solo para los primeros 2 proyector -->
             <div class="proyectos-grid">
                 <div class="proyecto">
                     <div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-        <!-- Proyecto 3 separado -->
+            <!-- Proyecto 3 separado -->
             <div class="proyecto">
                 <div>
                     <h3>3</h3>
@@ -116,9 +116,9 @@
 
         <!-- Habilidades -->
         <section id="presentacion" class="habilidades">
-
             <h2>Habilidades <span class="punto-2">⏺</span></h2>
             <div class="habilidades-matriz">
+
                 <div class="habilidades-grupo">
                     <span class="categoria">Frontend</span>
                     <ul class="items-hability">
@@ -169,7 +169,6 @@
             </div>
         </section>
 
-
         <!-- Contacto -->
         <section id="contacto" class="contacto">
             <h2>Contacto <span class="punto-3">⏺</span></h2>
@@ -179,13 +178,11 @@
                 <li><a href="https://www.linkedin.com/in/abril-carballo-6a6177359/" class="linkedin" target="_blank">&#x1F517 LinkedIn</a></li>
                 <li><a href="https://github.com/Abril-Carballo" class="github">𑄝 GitHub</a></li>
                 <li><a href="https://mail.google.com/mail/u/1/#inbox" class="gmail">✉ abril.carballo12@gmail.com</a></li>
-                <li><a href="docs/CV_Abril_Carballo.pdf" class="cv" download class="btn-descargar">Descargar CV</a>
-</li>
+                <li><a href="docs/CV_Abril_Carballo.pdf" class="cv" download class="btn-descargar">Descargar CV</a></li>
             </ul>
 
             <!-- Formulario simulado -->
             <!-- en esta seccion, utilizare tailwind, simplemente para demostrar el conocimiento del mismo -->
-
             <form class="max-w-md mx-auto mt-4 p-6 bg-[#748DAE] rounded-2xl shadow-lg space-y-4">
                 <div>
                     <label for="nombre" class="block mb-1 text-sm font-semibold text-white tracking-wide">Nombre</label>
@@ -216,11 +213,11 @@
                 </div>
             </form>
         </section>
-        
-        <script src="app.js"></script>
     </main>
-    <footer class="text-center p-1">
-        <p>&copy; 2025 ABRIL CARBALLO. Todos los derechos reservados.</p>
+
+    <footer>
+        <p>&copy; <span id="anio"></span> ABRIL CARBALLO. Todos los derechos reservados.</p>
+        <script src="app.js"></script>
     </footer>
 </body>
 </html>
