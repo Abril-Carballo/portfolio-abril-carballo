@@ -33,6 +33,8 @@ header {
 
 header h2 {
     color: #748DAE;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 /* navegacion */
@@ -545,7 +547,7 @@ header .hamburger {
   .pagina {
     flex-direction: column;
     text-align: center;
-    padding: 1rem 0.5rem; /* menos padding horizontal */
+    padding: 1rem 0.5rem;
   }
 
   .imagen, .texto {
@@ -553,49 +555,79 @@ header .hamburger {
     max-width: 100vw;
   }
 
-  /* Imagen de tu cara */
-  .imagen img {
-    width: 100%;
-    max-width: 400px; /* opcional: que no se haga gigante */
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* Tarjetas más angostas */
+  /* Tarjeta con efecto flip */
   .card {
-    max-width: 90%;
+    width: 90%;
+    max-width: 300px;
+    aspect-ratio: 4 / 5; /* mantiene proporción de la tarjeta */
     margin: 1rem auto;
   }
 
-  /* Menú: oculto nav y muestro hamburguesa */
-  header nav {
-    display: none;
-    flex-direction: column;
-    background-color: #F5CBCB;
-    margin-top: 10px;
-    border-radius: 8px;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
-
-  header nav.show {
-    display: flex;
-  }
-
-  /* Botón hamburguesa visible */
-  header .hamburger {
-    display: block;
-  }
-
-  /* Botones nav en columna, tamaño cómodo para dedos */
-  nav button {
-    margin: 8px 0;
-    padding: 12px 0;
-    font-size: 18px;
+  .card .card-inner {
     width: 100%;
-    border-radius: 0;
+    height: 100%;
   }
+
+  .card .card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+    /* Menú en móvil */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        border-radius: 12px;
+        background-color: transparent; /* sin fondo rosa */
+        overflow: hidden;
+        max-height: 0; /* cerrado por defecto */
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Cuando se abre el menú */
+    header nav.show {
+        max-height: 500px; /* suficiente para mostrar todo */
+        opacity: 1;
+    }
+
+    /* Botones del nav */
+    nav button {
+        all: unset;
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 18px;
+        color: #748DAE;
+        cursor: pointer;
+        text-align: center;
+        border-bottom: 1px solid #748DAE;
+        box-sizing: border-box;
+    }
+
+    nav button:last-child {
+        border-bottom: none;
+    }
+
+    nav button:hover {
+        color: #1f3a72;
+        border-bottom-color: #1f3a72;
+    }
+
+    /* Botón hamburguesa */
+    header .hamburger {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 24px;
+        margin-left: auto;
+    }
 
   /* Proyecto 3 - imágenes */
   .container {
@@ -613,19 +645,18 @@ header .hamburger {
     flex: 1 1 100%; /* no crecer demasiado en móvil */
   }
 
-    /* Habilidades en móviles */
-    .habilidades-matriz {
+  /* Habilidades en móviles */
+  .habilidades-matriz {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centra cada grupo */
-    gap: 15px; /* espacio entre grupos */
-    }
+    align-items: center; 
+    gap: 15px; 
+  }
 
-    .habilidades-grupo {
+  .habilidades-grupo {
     width: 90%; /* que no ocupe todo el ancho */
     text-align: center; /* centra el texto */
-    }
-
+  }
 
   /* Links de contacto */
   .redes {
@@ -640,7 +671,6 @@ header .hamburger {
     padding: 12px 0;
   }
 }
-
 
 /* Hover SOLO para PC */
 @media (hover: hover) and (pointer: fine) {
