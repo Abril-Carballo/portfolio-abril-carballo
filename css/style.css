@@ -482,17 +482,18 @@ header .hamburger {
 @media (min-width: 769px) and (max-width: 1024px) {
 
   /* Layout principal: texto e imagen uno al lado del otro pero más compacto */
-  .pagina {
+    .pagina {
     flex-direction: row;
-    justify-content: space-around;
-    padding: 1.5rem;
-    gap: 1rem;
-  }
+    justify-content: center; /* en vez de space-around */
+    padding: 1rem; /* un poco menos de relleno */
+    gap: 2rem; /* deja espacio solo entre los elementos */
+    }
 
-  .imagen, .texto {
-    max-width: 45%; /* que no ocupen más de la mitad cada uno */
+    .imagen, .texto {
+    max-width: 50%; /* un poco más para que ocupen mejor la pantalla */
     padding: 0.5rem;
-  }
+    }
+
 
   /* Imagen de tu cara */
   .imagen img {

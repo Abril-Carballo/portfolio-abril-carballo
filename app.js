@@ -50,14 +50,15 @@ hamburger.addEventListener('click', () => {
 
 // efecto de la imagen con avatar en telefonos y pc
 document.addEventListener('DOMContentLoaded', () => {
-  const card = document.querySelector('.card');
+  const cards = document.querySelectorAll('.card');
 
   const esTactil = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   if (esTactil) {
-    card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
     });
   }
 });
-
