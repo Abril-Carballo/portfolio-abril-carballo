@@ -18,5 +18,13 @@ Este es mi portfolio personal, donde se muestran mis proyectos, habilidades y da
 - Posible incorporación de animaciones más suaves y consistentes en transiciones de imágenes y tarjetas.  
 - Añadir accesibilidad avanzada, como navegación completa con teclado y lectores de pantalla.
 
+## ⌨ Previsualización
 
+### Versión escritorio
+![Escritorio](img/pc.png)
 
+### Versión tablet
+![Tablet](img/tablet.png)
+
+### Versión móvil
+![Móvil](img/telefono.png)
