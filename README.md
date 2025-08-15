@@ -1,12 +1,12 @@
 # Mi Portfolio ❤
 
 ## ✏ Descripción 
-Este es mi portfolio personal, donde se muestran mis proyectos, habilidades y datos de contacto. Incluye un diseño responsive que se adapta a móviles, tablets y escritorio, con un menú tipo hamburguesa para dispositivos pequeños y tarjetas de proyectos con efecto flip.
+Este es mi portfolio personal, donde se muestran mis proyectos, habilidades y datos de contacto. Incluye un diseño responsive que se adapta a móviles, tablets y escritorio, con un menú tipo hamburguesa para dispositivos pequeños, tarjeta personal con efecto flip, botones con distintos efectos y apariencias, scroll suave con botones que se dirigen hacia la página que apunta y links con información.
 
 ## ⌨ Tecnologías utilizadas 
 - HTML5
 - CSS3 (Flexbox, Media Queries, Pseudo-clases)
-- JavaScript (para interacciones como menú y tarjetas)
+- JavaScript (para distintas interacciones)
 
 ## ↳ Enlace al sitio
 [Ver mi portfolio en GitHub Pages](https://abril-carballo.github.io/portfolio-abril-carballo/)
