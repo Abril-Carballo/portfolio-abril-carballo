@@ -457,6 +457,13 @@ a.boton-github:focus {
     text-decoration: none;
 } 
 
+footer {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    width: 100%;              
+}
+
 
 /* --- Responsive y menú hamburguesa --- */
 
